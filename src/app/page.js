@@ -14,7 +14,8 @@ export default function Home() {
           priority
         />
         <h1>HOLA MUNDO</h1>
-        
+        <h2>Este sera mi comienzo con Next.JS</h2>
+
         </main>
     </div>
   );
