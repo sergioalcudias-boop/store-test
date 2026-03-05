@@ -13,6 +13,21 @@ export default function Home() {
           height={20}
           priority
         />
+        async function getData() {
+         const res = await fetch("http://localhost:3000/api/baseball");
+         return res.json();
+        }
+
+        export default async function Home() {
+         const data = await getData();
+
+         return (
+           <div>
+            <h1>Datos desde API</h1>
+            <pre>{JSON.stringify(data, null, 2)}</pre>
+           </div>
+           );
+          }
         
         <h1>HOLA MUNDO</h1>
         <h2>Este sera mi comienzo con Next.JS</h2>
